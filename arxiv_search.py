@@ -23,7 +23,7 @@ class ArxivSearcher:
                 "paper_id": r.entry_id.split("/")[-1],
                 "title": r.title.strip().replace("\n", " "),
                 "authors": ", ".join(a.name for a in r.authors),
-                "summary": r.summary.strip().replace("\n", " ")[:500],
+                "abstract": r.summary.strip().replace("\n", " ")[:500],
                 "published": r.published.strftime("%Y-%m-%d"),
                 "pdf_url": r.pdf_url
             }
